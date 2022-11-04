@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('default_colour');
+            $table->longText('description');
             $table->date('species_day');
+            $table->timestamps();
         });
     }
 

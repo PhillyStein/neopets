@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Species
+class Species extends Model
 {
-    public static function all() {
+    public static function getAll() {
         return [
             [
                 'id' => 1,
@@ -23,7 +23,7 @@ class Species
     }
 
     public static function find($id) {
-        $species = self::all();
+        $species = self::getAll();
 
         foreach($species as $specie) {
             if($specie['id'] == $id) {
